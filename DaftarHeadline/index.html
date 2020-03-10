@@ -1,0 +1,179 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Daftar Headline Republika</title>
+    <link href="libs/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .jsontotable table,
+        .jsontotable th,
+        .jsontotable td {
+            border: 2px solid grey;
+            margin: 10px;
+        }
+        
+        code {
+            white-space: normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div id="jsontotable-arr" class="jsontotable"></div>
+        <div id="jsontotable-obj" class="jsontotable"></div>
+        <div id="jsontotable-objwithdata" class="jsontotable"></div>
+        <div id="jsontotable-str" class="jsontotable"></div>
+    </div>
+    <script type="text/javascript" src="libs/js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="dist/jquery.jsontotable.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            var arr = [
+                [1, 2, 3],
+                ['one', 'two', 'three']
+            ];
+
+            //put your JSON to below
+            var obj = [{
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\" Anggota DRP RI Bantu Rp 70 Miliar  Bangun 4.000 Rutilahu\"",
+                "Waktu Publish": "\"1 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Sepak Bola\"",
+                "Judul": "\"Manchester United akan Jual Lingard Musim Depan\"",
+                "Waktu Publish": "\"5 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Satu Bulan, Sleman Pecahkan Tiga Rekor Muri\"",
+                "Waktu Publish": "\"6 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Warga Bogor Rasakan Guncangan Gempa di Sukabumi \"",
+                "Waktu Publish": "\"8 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Internasional\"",
+                "Judul": "\"UEA Konfirmasi 15 Kasus Terbaru Virus Corona\"",
+                "Waktu Publish": "\"8 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"IHRAM.CO.ID\"",
+                "Judul": "\"MUI Kritik Omnibus Law Soal Fatwa Halal dari Ormas Islam\"",
+                "Waktu Publish": "\"9 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nasional\"",
+                "Judul": "\"Reses Anggota Fraksi PDIP Berlangsung di Gang Sempit\"",
+                "Waktu Publish": "\"9 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nasional\"",
+                "Judul": "\"Penelusuran Kontak Jadi Upaya Cegah Penyebaran Corona\"",
+                "Waktu Publish": "\"12 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nasional\"",
+                "Judul": "\"Polisi: Lucinta Luna Dipindah ke Rutan Pondok Bambu\"",
+                "Waktu Publish": "\"13 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Pemuda di Bandung Divonis 19 Tahun karena Bunuh Mahasiswa\"",
+                "Waktu Publish": "\"15 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"IHRAM.CO.ID\"",
+                "Judul": "\"Jamaah Umroh Asal Mesir Juga Masih Tertahan di Arab Saudi\"",
+                "Waktu Publish": "\"15 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Polrestro Depok Tangkap Kelompok Remaja Asyik Pesta Ganja \"",
+                "Waktu Publish": "\"17 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Ekonomi\"",
+                "Judul": "\"BPH Migas dan Komisi VII DPR RI Awasi Penyaluran BBM\"",
+                "Waktu Publish": "\"18 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"IHRAM.CO.ID\"",
+                "Judul": "\"Kemenag Sumsel Minta Agen Umrah Jadwal Ulang Keberangkatan\"",
+                "Waktu Publish": "\"19 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nasional\"",
+                "Judul": "\"Zuli Qodir: Dakwah Muhammadiyah Belum Maksimal di Sosmed\"",
+                "Waktu Publish": "\"20 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nasional\"",
+                "Judul": "\"Dua Adik Ipar Nurhadi tak Penuhi Panggilan KPK\\t\"",
+                "Waktu Publish": "\"20 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Kasus DBD Meningkat di Lampung\"",
+                "Waktu Publish": "\"21 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nasional\"",
+                "Judul": "\"104 Orang Meninggal Akibat DBD\"",
+                "Waktu Publish": "\"23 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Ekonomi\"",
+                "Judul": "\"Buyback Dorong Peningkatan Harga Saham BUMN\"",
+                "Waktu Publish": "\"24 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Ekonomi\"",
+                "Judul": "\"Menteri Basuki: KCIC Harus Ikuti Kaidah K3\"",
+                "Waktu Publish": "\"28 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Sosialisasi Pencegahan Corona di Gresik, Ini Langkah Bupati Sambari\"",
+                "Waktu Publish": "\"28 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Senggang\"",
+                "Judul": "\"Dwi Sasono dan Widi Mulia Main Bareng di Buku Harianku\"",
+                "Waktu Publish": "\"29 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Gaya Hidup\"",
+                "Judul": "\"Aston Priority Gelar Batik Glow In The Dark \"",
+                "Waktu Publish": "\"31 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Nusantara\"",
+                "Judul": "\"Gempa Sukabumi tidak Berpotensi Tsunami\"",
+                "Waktu Publish": "\"32 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }, {
+                "Kategori": "\"Ekonomi\"",
+                "Judul": "\"Nasib Kereta Cepat Jakarta-Bandung Ditentukan Jumat\"",
+                "Waktu Publish": "\"32 menit yang lalu\"",
+                "Waktu Diambil": "18:49:20 10/3/2020"
+            }];
+
+            $("#jsontotable-obj")
+                .append($("<h1></h1>").html("Daftar Headline Republika"))
+                .append($("<h1></h1>").html(""))
+
+            $.jsontotable(obj, {
+                id: "#jsontotable-obj",
+                header: false
+            });
+
+        });
+    </script>
+</body>
+
+</html>
